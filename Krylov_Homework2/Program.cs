@@ -10,7 +10,7 @@ namespace Krylov_Homework2
             int[,] array= new int[7,3];
             MatrixController matrix = new MatrixController(array);
             Console.WriteLine(matrix);
-            matrix.SetMatrixVerticalSnake();
+            matrix.SetMatrixDiagonalSnake();
             Console.WriteLine(matrix);
         }
     }

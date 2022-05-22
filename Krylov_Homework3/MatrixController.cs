@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Krylov_Homework2
+namespace Krylov_Homework3
 {
     class MatrixController
     {
@@ -53,18 +53,25 @@ namespace Krylov_Homework2
 
             }
         }
-        public void SetMatrixDiagonalSnake() 
+        public void SetMatrixDiagonalSnake(Direction direction)
         {
-            //[0,0][0,1][0,2]
-            //[1,0][1,1][1,2]
-            //[2,0][2,1][2,2]
-
-            //[0,0] [0,1][1,0] [2,0][1,1][0,2] [1,2][2,1] [2,2]
             int counter = 1;
-
+            int dir, ii, jj;
+            if (direction == Direction.Down)
+            {
+                dir = 1;
+                ii = 2;
+                jj = 1;
+            }
+            else
+            {
+                dir = 0;
+                ii = 1;
+                jj = 2;
+            }
             for (int line = 0; line < matrix.GetLength(0); line++)
             {
-                if (line % 2 == 0)
+                if (line % 2 == dir)
                 {
                     int i1 = line;
                     int j1 = 0;
@@ -87,11 +94,10 @@ namespace Krylov_Homework2
                     }
                 }
             }
-            int ii = 1;
-            int jj = 2;
+
             for (int line = matrix.GetLength(0) - 1; line >= 0; line--)
             {
-                if (line % 2 == 0)
+                if (line % 2 == dir)
                 {
                     int i1 = ii;
                     ii += 2;
@@ -116,6 +122,8 @@ namespace Krylov_Homework2
                     }
                 }
             }
+
+
         }
         public override string ToString()
         {
