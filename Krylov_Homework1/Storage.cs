@@ -9,10 +9,12 @@ namespace Krylov_Homework1_2
     class Storage
     {
         private Product[] products;
+        //Конструктор без параметрів
         public Storage(params Product[] products)
         {
             this.products = products;
         }
+        //Небажаний метод
         public void ShowInfo()
         {
             for (int i = 0; i < products.Length; i++)
@@ -23,7 +25,7 @@ namespace Krylov_Homework1_2
         public void FindMeat()
         {
             for (int i = 0; i < products.Length; i++)
-            {
+            {//операції is as!!!
                 if (products[i].GetType() == typeof(Meat))
                     Console.WriteLine(products[i]);
             }
