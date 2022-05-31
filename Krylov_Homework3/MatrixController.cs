@@ -94,7 +94,7 @@ namespace Krylov_Homework3
                     }
                 }
             }
-
+// можна біло б уникнути цього циклу. Але алгоритмічно складніше. Трба було знайти закономірність
             for (int line = matrix.GetLength(0) - 1; line >= 0; line--)
             {
                 if (line % 2 == dir)
