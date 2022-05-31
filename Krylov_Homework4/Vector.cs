@@ -229,6 +229,7 @@ namespace Krylov_Homework4
             x = y;
             y = t;
         }
+        //немає стратегії вибору опорного елемента
         int Partition(int minIndex, int maxIndex)
         {
             var pivot = minIndex-1;
@@ -245,6 +246,7 @@ namespace Krylov_Homework4
             Swap(ref array[pivot], ref array[maxIndex]);
             return pivot;
         }
+        //privat краще вказувати
         void QuickSort(int minIndex, int maxIndex)
         {
             if (minIndex >= maxIndex)
