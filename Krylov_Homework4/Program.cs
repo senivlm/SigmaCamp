@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Krylov_Homework4
-{
+{// Ваш номер у списку 50.
     enum Direction
     {
         Right,
