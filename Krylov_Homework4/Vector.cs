@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Krylov_Homework4
 {
     class Vector
-    {
+    {// немає вибору опорного елемента, як пропонувалось в завданні!!!!
         int[] array;
         public int this[uint index]
         {
@@ -245,6 +245,7 @@ namespace Krylov_Homework4
             Swap(ref array[pivot], ref array[maxIndex]);
             return pivot;
         }
+        // Специфікатори доступу краще вказувати явно.
         void QuickSort(int minIndex, int maxIndex)
         {
             if (minIndex >= maxIndex)
